@@ -7,7 +7,7 @@ from io import BytesIO
 
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1Q9s756_ziASpFnAwakZOXyeKYHxkzINE'
+model_file_url = 'https://www.dropbox.com/s/0q1corenlsq7jop/stage4.pth?raw=1'
 model_file_name = 'stage4'
 classes = ['Agrostemma-githago_Cotyledon',
            'Agrostemma-githago_Foliage',
