@@ -7,8 +7,8 @@ from io import BytesIO
 
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=1pgVWN_dY2mW6eLVYKmC7tbNa3hFA-oUH'
-model_file_name = 'stage2'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1M6-_lN7MAdpXzfyELHMlftAwyf51Fxlm'
+model_file_name = 'export.pkl'
 classes = ['Agrostemma-githago_Cotyledon',
            'Agrostemma-githago_Foliage',
            'Agrostemma-githago_Intermediate',
@@ -32,7 +32,7 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f: f.write(data)
 
 async def setup_learner():
-    await download_file(model_file_url, path/'models'/f'{model_file_name}.pth')
+    await download_file(model_file_url, path/'models'/f'{model_file_name}')
     data_bunch = ImageDataBunch.single_from_classes(path, classes,
         ds_tfms=get_transforms(), size=500).normalize(imagenet_stats)
     learn = cnn_learner(data_bunch, models.resnet50, pretrained=False)
