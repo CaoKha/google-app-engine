@@ -7,9 +7,17 @@ from io import BytesIO
 
 from fastai.vision import *
 
-model_file_url = 'https://www.dropbox.com/s/y4kl2gv1akv7y4i/stage-2.pth?raw=1'
-model_file_name = 'model'
-classes = ['black', 'grizzly', 'teddys']
+model_file_url = 'https://drive.google.com/uc?export=download&id=1pgVWN_dY2mW6eLVYKmC7tbNa3hFA-oUH'
+model_file_name = 'stage2'
+classes = ['Agrostemma-githago_Cotyledon',
+           'Agrostemma-githago_Foliage',
+           'Agrostemma-githago_Intermediate',
+           'Beta-vulgaris_Cotyledon',
+           'Beta-vulgaris_Foliage',
+           'Beta-vulgaris_Intermediate',
+           'Crepis-setosa_Cotyledon',
+           'Crepis-setosa_Foliage',
+           'Crepis-setosa_Intermediate']
 path = Path(__file__).parent
 
 app = Starlette()
